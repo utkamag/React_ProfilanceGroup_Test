@@ -19,8 +19,11 @@ const Header = () => {
     //Включаем popup
 
     const onTurn = () => {
-        dispatch({type:"POPUP_ACTIVATE", payload: true})
-        if (reload === "Выход") {
+        if (reload === "Вход") {
+            dispatch({type:"POPUP_ACTIVATE", payload: true})
+
+        }
+        else if (reload === "Выход") {
             window.location.reload()
         }
 

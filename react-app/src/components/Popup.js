@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 import {useNavigate} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
-import {changeLogin} from "../store/loginReducer";
 
 const Popup = () => {
 
@@ -49,12 +48,14 @@ const Popup = () => {
         if (user.login === "user" && user.password === "user" ) {
             dispatch({type: "CHANGE_LOGIN", payload: user.login})
             dispatch({type: "INOUT_LOGIN", payload: "Выход"})
+            dispatch({type:"POPUP_ACTIVATE", payload: false})
             navigate("/user")
         }
 
         else if (user.login === "admin" && user.password === "admin" ) {
             dispatch({type: "CHANGE_LOGIN", payload: user.login})
             dispatch({type: "INOUT_LOGIN", payload: "Выход"})
+            dispatch({type:"POPUP_ACTIVATE", payload: false})
             navigate("/admin")
         }
 
@@ -63,9 +64,10 @@ const Popup = () => {
         }
     }
 
-    const closePopUp = () => {
+    const closePopUp = (e) => {
         dispatch({type:"POPUP_ACTIVATE", payload: false})
     }
+
 
 
     return (
