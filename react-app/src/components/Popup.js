@@ -63,13 +63,13 @@ const Popup = () => {
         }
     }
 
-    const huy = () => {
+    const closePopUp = () => {
         dispatch({type:"POPUP_ACTIVATE", payload: false})
     }
 
 
     return (
-        <div className={active ? "popup" : "popup__none"} onClick={huy}>
+        <div className={active ? "popup" : "popup__none"} onClick={closePopUp}>
             <div className="popup__content" onClick={e => e.stopPropagation()}>
                 <div className="popup__title">Войти в систему</div>
                 <form onSubmit={loginIn}>
