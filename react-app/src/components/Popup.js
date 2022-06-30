@@ -45,10 +45,13 @@ const Popup = ({active, setActive}) => {
 
         if (user.login === "user" && user.password === "user" ) {
             dispatch({type: "CHANGE_LOGIN", payload: user.login})
+            dispatch({type: "INOUT_LOGIN", payload: "Выход"})
+            navigate("/user")
         }
 
         else if (user.login === "admin" && user.password === "admin" ) {
             dispatch({type: "CHANGE_LOGIN", payload: user.login})
+            dispatch({type: "INOUT_LOGIN", payload: "Выход"})
             navigate("/admin")
         }
 
