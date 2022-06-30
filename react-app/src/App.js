@@ -6,13 +6,11 @@ import Popup from "./components/Popup";
 
 function App() {
 
-    const [popupActive, setPopupActive] = useState(false)
-
     return (
         <div>
-            <Header turnOn={setPopupActive}/>
+            <Header/>
             <Main/>
-            <Popup active={popupActive} setActive={setPopupActive}/>
+            <Popup/>
         </div>
     );
 }

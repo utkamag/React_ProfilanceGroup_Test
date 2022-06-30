@@ -1,9 +1,17 @@
 import React from 'react';
 import {Link} from "react-router-dom";
 import headerLogo from '../assets/img/header_img.svg'
-import {useSelector} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 
-const Header = ({turnOn}) => {
+const Header = () => {
+
+    //Redux dispatch, открываем popup
+
+    let dispatch = useDispatch()
+
+    //Redux презагрузка страницы
+
+    let reload = useSelector(state => state.inside)
 
     //Redux
     const insideOutside = useSelector(state => state.inside)
@@ -11,7 +19,11 @@ const Header = ({turnOn}) => {
     //Включаем popup
 
     const onTurn = () => {
-        turnOn(true)
+        dispatch({type:"POPUP_ACTIVATE", payload: true})
+        if (reload === "Выход") {
+            window.location.reload()
+        }
+
     }
 
 

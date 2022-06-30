@@ -1,15 +1,17 @@
 import React, {useState} from 'react';
 import {useNavigate} from "react-router-dom";
-import {useDispatch} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import {changeLogin} from "../store/loginReducer";
 
-const Popup = ({active, setActive}) => {
+const Popup = () => {
 
     //Используем хук с переадресацией
 
     // Redux
 
     let dispatch = useDispatch()
+
+    let active = useSelector(state => state.popupActive)
 
 
     let navigate = useNavigate()
@@ -20,6 +22,7 @@ const Popup = ({active, setActive}) => {
         login: "",
         password: ""
     })
+
 
     //Данные с инпута
 
@@ -58,14 +61,15 @@ const Popup = ({active, setActive}) => {
         else {
             alert("Некоректные данные")
         }
+    }
 
-
+    const huy = () => {
+        dispatch({type:"POPUP_ACTIVATE", payload: false})
     }
 
 
-
     return (
-        <div className={active ? "popup" : "popup__none"} onClick={() => setActive(false)}>
+        <div className={active ? "popup" : "popup__none"} onClick={huy}>
             <div className="popup__content" onClick={e => e.stopPropagation()}>
                 <div className="popup__title">Войти в систему</div>
                 <form onSubmit={loginIn}>
