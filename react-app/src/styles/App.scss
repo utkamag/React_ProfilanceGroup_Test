@@ -95,6 +95,37 @@
   &__submit:active {
     background: $activecolor;
   }
+}
 
+/* Header */
+
+.news {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  &__widget {
+    width: 35vw;
+    background: $secondcolor;
+    padding: 8px 16px;
+    margin: 20px auto;
+    border-radius: 15px;
+  }
+
+  &__widget-title {
+    margin-bottom: 5px;
+    font-weight: bolder;
+    font-size: 17px;
+    color: black;
+  }
+  &__widget-text {
+    color: black;
+  }
+  &__widget-date {
+    padding-top: 15px;
+    margin-bottom: 5px;
+    color: green;
+  }
 }
 

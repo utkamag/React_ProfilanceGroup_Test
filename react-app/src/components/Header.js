@@ -1,9 +1,12 @@
 import React from 'react';
-import {Link} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 import headerLogo from '../assets/img/header_img.svg'
 import {useDispatch, useSelector} from "react-redux";
 
 const Header = () => {
+    //Переадресация
+
+    let navigate = useNavigate()
 
     //Redux dispatch, открываем popup
 
@@ -24,6 +27,7 @@ const Header = () => {
 
         }
         else if (reload === "Выход") {
+            navigate("/")
             window.location.reload()
         }
 

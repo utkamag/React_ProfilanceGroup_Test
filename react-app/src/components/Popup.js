@@ -12,6 +12,7 @@ const Popup = () => {
 
     let active = useSelector(state => state.popupActive)
 
+    //Переадресация
 
     let navigate = useNavigate()
 
