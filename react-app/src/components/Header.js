@@ -12,12 +12,12 @@ const Header = () => {
 
     let dispatch = useDispatch()
 
-    //Redux презагрузка страницы
+    //Redux (получаем данные со store)
 
-    let reload = useSelector(state => state.inside)
-
-    //Redux
+    const reload = useSelector(state => state.inside)
     const insideOutside = useSelector(state => state.inside)
+    const loginOfUser = useSelector(state => state.login)
+
 
     //Включаем popup
 
@@ -33,6 +33,20 @@ const Header = () => {
 
     }
 
+    // Функция по переадресации (админ на страцницу к админу, обычный пользователь на свою)
+
+    const linkToFunction = () => {
+        if (loginOfUser === "admin") {
+            navigate("/admin")
+        }
+        else if (loginOfUser === "user") {
+            navigate("/user")
+        }
+        else {
+            navigate("/news")
+        }
+    }
+
 
     return (
         <div className="wrapper">
@@ -41,7 +55,7 @@ const Header = () => {
                     <img className="header__img" src={headerLogo} alt="headerLogo"/>
                 </Link>
                 <div className="header__list">
-                    <span className="header__news">Новости</span>
+                    <span className="header__news" onClick={linkToFunction}>Новости</span>
                     <span className="header__login-active" onClick={onTurn}>{insideOutside}</span>
                 </div>
 
