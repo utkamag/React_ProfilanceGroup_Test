@@ -6,7 +6,7 @@ const Main = () => {
 
     // Получаем данные со Store
 
-    const loginName = useSelector(state => state.login)
+    const loginName = useSelector(state => state.loginReducer.login)
 
     return (
         <div className="wrapper">

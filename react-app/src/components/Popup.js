@@ -10,7 +10,7 @@ const Popup = () => {
 
     let dispatch = useDispatch()
 
-    let active = useSelector(state => state.popupActive)
+    let active = useSelector(state => state.loginReducer.popupActive)
 
     //Переадресация
 

@@ -14,9 +14,9 @@ const Header = () => {
 
     //Redux (получаем данные со store)
 
-    const reload = useSelector(state => state.inside)
-    const insideOutside = useSelector(state => state.inside)
-    const loginOfUser = useSelector(state => state.login)
+    const reload = useSelector(state => state.loginReducer.inside)
+    const insideOutside = useSelector(state => state.loginReducer.inside)
+    const loginOfUser = useSelector(state => state.loginReducer.login)
 
 
     //Включаем popup
