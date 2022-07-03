@@ -44,7 +44,6 @@ const Popup = () => {
 
     const loginIn = (e) => {
         e.preventDefault()
-        console.log(user)
 
         if (user.login === "user" && user.password === "user" ) {
             dispatch({type: "CHANGE_LOGIN", payload: user.login})
