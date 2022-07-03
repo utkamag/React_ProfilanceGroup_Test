@@ -73,6 +73,19 @@
     width: 200px;
   }
 
+  &__content-news {
+    background: $maincolor;
+    padding: 50px;
+    border-radius: 15px;
+    height: 250px;
+    width: 500px;
+  }
+
+  &__content-title {
+    margin-top: 40px;
+    font-weight: bolder;
+  }
+
   &__none {
     display: none;
   }
@@ -103,7 +116,6 @@
 .news {
   display: flex;
   justify-content: space-around;
-  flex-direction: row;
   flex-wrap: wrap;
 
   &__widget {
@@ -128,5 +140,14 @@
     margin-bottom: 5px;
     color: green;
   }
+}
+
+/* News Without Login */
+
+.news-without-login{
+  display: flex;
+  color: darkgrey;
+  margin-left: 10px;
+  padding: 2px;
 }
 

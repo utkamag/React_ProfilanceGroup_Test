@@ -23,6 +23,7 @@ const Header = () => {
 
     const onTurn = () => {
         if (reload === "Вход") {
+            navigate("/")
             dispatch({type:"POPUP_ACTIVATE", payload: true})
 
         }
