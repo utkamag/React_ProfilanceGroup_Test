@@ -146,8 +146,23 @@
 
 .news-without-login{
   display: flex;
-  color: darkgrey;
+  color: $descriptiontext;
   margin-left: 10px;
   padding: 2px;
 }
+
+/* Search Input */
+
+.search__input {
+  padding: 15px;
+  margin-top: 10px;
+  margin-left: 5px;
+  box-sizing: border-box;
+  width: 49%;
+  font-family: inherit;
+  border: 1px solid #bdbdbd;
+  border-radius: 5px;
+  background-color: $secondcolor;
+}
+
 
