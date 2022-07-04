@@ -165,4 +165,24 @@
   background-color: $secondcolor;
 }
 
+/* News Request */
+
+.newsrequest {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  padding: 15px;
+  &__newsrequest__title {
+  }
+
+  &__newsrequest__text {
+  }
+
+  &__main-title {
+    width: 100vw;
+  }
+}
+
 
