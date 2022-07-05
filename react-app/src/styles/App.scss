@@ -174,15 +174,92 @@
   text-align: center;
   justify-content: center;
   padding: 15px;
-  &__newsrequest__title {
-  }
-
-  &__newsrequest__text {
-  }
 
   &__main-title {
-    width: 100vw;
+    width: 100%;
   }
+  &__title {
+    font-size: 20px;
+    width: 100%;
+  }
+
+  &__text {
+    font-size: 20px;
+    width: 100%;
+  }
+
+  &__date {
+    font-size: 20px;
+    width: 100%;
+  }
+  &__title-textarea {
+    font-family: -apple-system;
+    font-size: 17px;
+    font-weight: bolder;
+    padding: 15px;
+    height: 60px;
+    width: 80%;
+    border-radius: 5px;
+    outline: none;
+    resize: none;
+  }
+
+  &__text-textarea {
+    font-family: -apple-system;
+    font-size: 16px;
+    padding: 15px;
+    height: 120px;
+    width: 80%;
+    border-radius: 5px;
+    outline: none;
+    resize: none;
+  }
+
+  &__date-textarea {
+    font-family: -apple-system;
+    font-size: 16px;
+    color: green;
+    padding: 15px;
+    height: 60px;
+    width: 30%;
+    border-radius: 5px;
+    outline: none;
+    resize: none;
+  }
+  &__button {
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 17px;
+    background: darkkhaki;
+    transition: 0.5s;
+  }
+
+  &__button:hover{
+    margin-top: 17px;
+    background: $activecolor;
+  }
+
+  &__button:active {
+    margin-top: 17px;
+    background: $activecolor;
+  }
+  &__done {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  &__done-title {
+    color: $activecolor;
+  }
+
+  &__svg {
+    width: 12%;
+  }
+
 }
+
 
 

@@ -10,9 +10,8 @@ const User = () => {
     return (
         <div>
             <Header/>
-            <NewsRequest/>
             <News/>
-
+            <NewsRequest/>
         </div>
     );
 };
