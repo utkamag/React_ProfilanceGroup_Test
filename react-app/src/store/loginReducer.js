@@ -1,6 +1,6 @@
 // Локальное состояние
 
-const defualtState = {
+const defaultState = {
     login: "Гость",
     inside: "Вход",
     popupActive: false
@@ -16,7 +16,7 @@ const POPUP_ACTIVATE = "POPUP_ACTIVATE"
 
 // Создаем Редьюсер
 
-export const reducer = (state = defualtState, action) => {
+export const reducer = (state = defaultState, action) => {
     switch (action.type) {
         case CHANGE_LOGIN:
             return {...state, login: action.payload}

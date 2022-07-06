@@ -31,7 +31,7 @@ const NewsRequest = () => {
             allData: title, text, dates,
             id: Date.now()
         }
-        dispatch({type: "ADD_NEWS", payload: allNews})
+        dispatch({type: "SEND_ACCEPT", payload: allNews})
     }
 
     // Тернарный оператор, при отправке новости рендерим элемент с успешной отправкой

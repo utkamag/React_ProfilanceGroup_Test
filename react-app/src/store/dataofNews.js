@@ -1,6 +1,6 @@
 // Локальное состояние
 
-const defualtState = {
+const defaultState = {
     title: "",
 }
 
@@ -12,7 +12,7 @@ const ADD_TEXT = "ADD_TEXT"
 
 // Создаем Редьюсер
 
-export const secondReducer = (state = defualtState, action) => {
+export const secondReducer = (state = defaultState, action) => {
     switch (action.type) {
         case ADD_TEXT:
             return {...state, title: action.payload}

@@ -1,6 +1,6 @@
 // Локальное состояние массива с новостями
 
-const deafultState = {
+const defaultState = {
     array: [{
         "news_title": "Роспотребнадзор снял все введенные коронавирусные ограничения",
         "news_text": "Роспотребнадзор снимает ограничения, введенные с начала 2020 г. в России из-за пандемии, включая масочный режим. Роспотребнадзор обязал носить маски в местах массового пребывания в октябре 2020 г.",
@@ -53,7 +53,7 @@ const CHANGE_DATE = "CHANGE_DATE"
 
 // Reducer
 
-export const thirdreducer = (state = deafultState, action) => {
+export const thirdreducer = (state = defaultState, action) => {
     switch (action.type) {
         case ADD_NEWS:
             return {...state, array: [...state.array, action.payload]}
