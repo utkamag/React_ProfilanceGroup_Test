@@ -9,8 +9,7 @@ const PopupNews = () => {
 
     let active = useSelector(state => state.loginReducer.popupActive)
     let title = useSelector(state => state.newsReducer.title)
-    let text = useSelector(state => state.newsReducer.text)
-    let date = useSelector(state => state.newsReducer.date)
+
 
 //Закрыаем PopUp
 

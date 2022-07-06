@@ -1,14 +1,15 @@
-import React, {useEffect, useState} from 'react';
-import NEWS_DATA from "../assets/JSON/package.json"
-import {useDispatch} from "react-redux";
+import  React, {useEffect, useState} from 'react';
+import {useDispatch, useSelector} from "react-redux";
 
 const News = () => {
 
-    const data = NEWS_DATA
+    // Достаем массив со store
+
+    const array = useSelector(state => state.newsRequestReducer.array)
 
     //Стейт массива и фильтрации данных
 
-    const [newsList, setNewsList] = useState(data)
+    const [newsList, setNewsList] = useState(array)
     const [search, setSearch] = useState("")
 
     //Redux
@@ -31,17 +32,17 @@ const News = () => {
             <input className="search__input" type="text" placeholder="Поиск новостей" value={search}
                    onChange={(e) => setSearch(e.target.value.toLowerCase())}/>
             <div className="news">
-                {newsList.filter((list) => list.news_title.toLowerCase().includes(search)).map((data) => {
+                {newsList.filter((list) => list.allData.toLowerCase().includes(search)).map((array) => {
                     return (
-                        <div className="news__widget" onClick={popupOn}>
+                        <div className="news__widget" onDoubleClick={popupOn}>
                             <div className="news__widget-title" key={newsList.id}>
-                                {data.news_title}
+                                {array.news_title}
                             </div>
                             <div className="news__widget-text" key={newsList.id}>
-                                {data.news_text}
+                                {array.news_text}
                             </div>
                             <div className="news__widget-date" key={newsList.id}>
-                                {data.date}
+                                {array.date}
                             </div>
                         </div>
                     )
