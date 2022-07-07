@@ -22,7 +22,7 @@ export const fourthreducer = (state = defaultState, action) => {
             return {...state, pass: [...state.pass, action.payload]}
         }
         case DELETE_ACCEPT: {
-            return {...state, send: state.send.filter(sen => sen.news_title !== action.payload)}
+            return {...state, send: state.send.filter(sen => sen.id !== action.payload)}
         }
         default:
             return state

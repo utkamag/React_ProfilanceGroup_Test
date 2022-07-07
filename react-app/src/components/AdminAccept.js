@@ -12,7 +12,7 @@ const AdminAccept = () => {
     // Удаляем новость
 
     const deleteWidget = () => {
-        dispatch({type:"DELETE_ACCEPT", payload: allNews.id})
+        dispatch({type:"DELETE_ACCEPT", payload: allNews.news_title})
     }
 
 
