@@ -4,16 +4,30 @@ import {reducer} from "./loginReducer";
 import {secondReducer} from "./dataofNews";
 import {thirdreducer} from "./newsRequestReducer";
 import {fourthreducer} from "./accept";
+import { persistStore, persistReducer } from 'redux-persist'
+import storage from 'redux-persist/lib/storage' // defaults to localStorage for web
 
 
-// Создаем store (сюда необходимо передать редьюсер, если редьюсеров несколко, используем метод combineReducer)
+// Создаем store, также используем Redux persist
 
-let rootReducer = combineReducers({
+export const rootReducer = combineReducers({
     loginReducer: reducer,
     newsReducer: secondReducer,
     newsRequestReducer: thirdreducer,
     acceptReducer: fourthreducer
 })
 
+const persistConfig = {
+    key: 'root',
+    storage,
+}
 
-export const store = createStore(rootReducer, composeWithDevTools())
+const persistedReducer = persistReducer(persistConfig, rootReducer)
+
+export const store = createStore(persistedReducer, composeWithDevTools())
+
+export const persistor = persistStore(store)
+
+
+
+

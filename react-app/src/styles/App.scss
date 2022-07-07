@@ -45,9 +45,6 @@
   justify-content: center;
   align-items: center;
   height: 80vh;
-
-  &__title {
-  }
 }
 
 /* Popup, Popup News */
@@ -111,7 +108,7 @@
 }
 
 
-/* Header */
+/* News */
 
 .news {
   display: flex;
@@ -258,7 +255,59 @@
   &__svg {
     width: 12%;
   }
+}
 
+/* Admin */
+
+.admin-main{
+  margin: 20px;
+}
+
+.admin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  &__widget {
+    padding: 8px 16px;
+    border-radius: 15px;
+    background: $secondcolor;
+  }
+  &__title {
+    margin-bottom: 5px;
+    font-weight: bolder;
+    font-size: 17px;
+    color: black;
+
+  }
+  &__text {
+    color: black;
+  }
+  &__date {
+    padding-top: 15px;
+    margin-bottom: 5px;
+    color: green;
+  }
+  &__button{
+    display: flex;
+    margin-top: 15px;
+
+  }
+  &__button-accept {
+    border-radius: 5px;
+    padding: 10px;
+    width: 110px;
+    height: 50px;
+  }
+
+  &__button-delete {
+    border-radius: 5px;
+    margin-left: 10px;
+    padding: 10px;
+    width: 110px;
+    height: 50px;
+  }
 }
 
 

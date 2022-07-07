@@ -2,6 +2,7 @@ import React from 'react';
 import {Link, useNavigate} from "react-router-dom";
 import headerLogo from '../assets/img/header_img.svg'
 import {useDispatch, useSelector} from "react-redux";
+import {type} from "@testing-library/user-event/dist/type";
 
 const Header = () => {
     //Переадресация
@@ -29,7 +30,8 @@ const Header = () => {
         }
         else if (reload === "Выход") {
             navigate("/")
-            window.location.reload()
+            dispatch({type: "CHANGE_LOGIN", payload: "Гость"})
+            dispatch({type: "INOUT_LOGIN", payload: "Вход"})
         }
 
     }

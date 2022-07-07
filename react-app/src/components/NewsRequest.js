@@ -18,17 +18,22 @@ const NewsRequest = () => {
     const [text, setText] = useState("")
     const [dates, setDates] = useState("")
 
+    // Объеденяем все данные
+
+    const data = `${title} ${text} ${dates}`
+
     //Функция по отправке новости
 
     let sendNews = (e) => {
         e.preventDefault()
+        console.log(data)
         setTextareadone(false)
 
         const allNews = {
             news_title: title,
             news_text: text,
             date: dates,
-            allData: title, text, dates,
+            allData: data,
             id: Date.now()
         }
         dispatch({type: "SEND_ACCEPT", payload: allNews})
