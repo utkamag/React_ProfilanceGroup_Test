@@ -267,9 +267,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: wrap;
   &__widget {
+    margin-bottom: 15px;
     padding: 8px 16px;
     border-radius: 15px;
     background: $secondcolor;
@@ -307,6 +308,20 @@
     padding: 10px;
     width: 110px;
     height: 50px;
+  }
+  &__img-delete {
+    margin-right: 15px;
+    width: 40px;
+  }
+  &__img-delete:hover {
+    cursor: pointer;
+  }
+  &__img-add {
+    margin-left: 15px;
+    width: 40px;
+  }
+  &__img-add:hover {
+    cursor: pointer;
   }
 }
 

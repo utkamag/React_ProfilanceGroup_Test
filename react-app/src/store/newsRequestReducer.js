@@ -48,8 +48,7 @@ const defaultState = {
 // Action
 
 const ADD_NEWS = "ADD_NEWS"
-const CHANGE_TEXT = "CHANGE_TEXT"
-const CHANGE_DATE = "CHANGE_DATE"
+
 
 // Reducer
 

@@ -26,7 +26,6 @@ const NewsRequest = () => {
 
     let sendNews = (e) => {
         e.preventDefault()
-        console.log(data)
         setTextareadone(false)
 
         const allNews = {
@@ -36,7 +35,7 @@ const NewsRequest = () => {
             allData: data,
             id: Date.now()
         }
-        dispatch({type: "SEND_ACCEPT", payload: allNews})
+        dispatch({type: "PASS_ACCEPT", payload: allNews})
     }
 
     // Тернарный оператор, при отправке новости рендерим элемент с успешной отправкой
