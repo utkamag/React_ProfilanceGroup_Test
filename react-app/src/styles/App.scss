@@ -100,10 +100,11 @@
   &__submit {
     border-radius: 5px;
     margin-top: 10px;
+    background-color: $profilanceLionFirst;
   }
 
   &__submit:active {
-    background: $activecolor;
+    background: $profilanceLionYellow;
   }
 }
 
@@ -227,18 +228,18 @@
     border-radius: 5px;
     padding: 10px;
     margin-top: 17px;
-    background: darkkhaki;
+    background: $profilanceLionFirst;
     transition: 0.5s;
   }
 
   &__button:hover{
     margin-top: 17px;
-    background: $activecolor;
+    background: $profilanceLionYellow;
   }
 
   &__button:active {
     margin-top: 17px;
-    background: $activecolor;
+    background: $profilanceLionRed;
   }
   &__done {
     display: flex;
