@@ -34,7 +34,7 @@ const News = () => {
             <div className="news">
                 {newsList.filter((list) => list.allData.toLowerCase().includes(search)).map((array) => {
                     return (
-                        <div className="news__widget" onDoubleClick={popupOn}>
+                        <div className="news__widget" key={newsList.id} onDoubleClick={popupOn}>
                             <div className="news__widget-title" key={newsList.id}>
                                 {array.news_title}
                             </div>

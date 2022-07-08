@@ -49,7 +49,7 @@ const AdminAccept = () => {
 
                     )
                     : (
-                        <div>Запросов на модерацию новостей нет</div>
+                        <div className="admin__subtitle">*запросов на модерацию новостей нет</div>
                     )
                 }
 
