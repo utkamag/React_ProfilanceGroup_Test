@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import doneSVG from '../assets/img/done.svg'
-import {useDispatch, useSelector} from "react-redux";
+import {useDispatch} from "react-redux";
 
 
 const NewsRequest = () => {
