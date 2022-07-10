@@ -130,9 +130,11 @@
     font-size: 17px;
     color: black;
   }
+
   &__widget-text {
     color: black;
   }
+
   &__widget-date {
     padding-top: 15px;
     margin-bottom: 5px;
@@ -142,7 +144,7 @@
 
 /* News Without Login */
 
-.news-without-login{
+.news-without-login {
   display: flex;
   color: $descriptiontext;
   margin-left: 10px;
@@ -176,6 +178,7 @@
   &__main-title {
     width: 100%;
   }
+
   &__title {
     font-size: 20px;
     width: 100%;
@@ -190,6 +193,7 @@
     font-size: 20px;
     width: 100%;
   }
+
   &__title-textarea {
     font-family: -apple-system;
     font-size: 17px;
@@ -224,6 +228,7 @@
     outline: none;
     resize: none;
   }
+
   &__button {
     border-radius: 5px;
     padding: 10px;
@@ -232,7 +237,7 @@
     transition: 0.5s;
   }
 
-  &__button:hover{
+  &__button:hover {
     margin-top: 17px;
     background: $profilanceLionYellow;
   }
@@ -241,6 +246,7 @@
     margin-top: 17px;
     background: $profilanceLionRed;
   }
+
   &__done {
     display: flex;
     justify-content: center;
@@ -260,7 +266,7 @@
 
 /* Admin */
 
-.admin-main{
+.admin-main {
   margin: 20px;
 }
 
@@ -270,12 +276,14 @@
   align-items: center;
   flex-direction: row;
   flex-wrap: wrap;
+
   &__widget {
     margin-bottom: 15px;
     padding: 8px 16px;
     border-radius: 15px;
     background: $secondcolor;
   }
+
   &__title {
     margin-bottom: 5px;
     font-weight: bolder;
@@ -283,22 +291,27 @@
     color: black;
 
   }
+
   &__subtitle {
     color: $descriptiontext;
   }
+
   &__text {
     color: black;
   }
+
   &__date {
     padding-top: 15px;
     margin-bottom: 5px;
     color: green;
   }
-  &__button{
+
+  &__button {
     display: flex;
     margin-top: 15px;
 
   }
+
   &__button-accept {
     border-radius: 5px;
     padding: 10px;
@@ -313,19 +326,142 @@
     width: 110px;
     height: 50px;
   }
+
   &__img-delete {
     margin-right: 15px;
     width: 40px;
   }
+
   &__img-delete:hover {
     cursor: pointer;
   }
+
   &__img-add {
     margin-left: 15px;
     width: 40px;
   }
+
   &__img-add:hover {
     cursor: pointer;
+  }
+}
+
+/* Media queries */
+
+/* Tablet */
+
+@media screen and (max-width: 1200px)
+{
+  .wrapper {
+    max-width: 1024px;
+    margin: 0 auto;
+  }
+  .header {
+    display: flex;
+    justify-content: space-around;
+
+  }
+  .header__img {
+    width: 30vw;
+  }
+  .header__news {
+    font-size: 30px;
+  }
+  .header__login-active {
+    font-size: 30px;
+  }
+  .search__input {
+    margin-top: 15px;
+    width: 50vw;
+    margin-left: 80px;
+  }
+  .news-without-login {
+    margin-left: 80px;
+    padding: 10px;
+  }
+  .news__widget {
+    width: 80%;
+  }
+  .popup__content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 110px;
+    width: 40%;
+    height: 10%;
+  }
+  .popup__title {
+    margin-bottom: 5px;
+    font-size: 35px;
+  }
+  .popup__input {
+    width: 80%;
+    height: 20px;
+  }
+  .popup__submit {
+    margin-top: 15px;
+    width: 40%;
+    height: 30px;
+  }
+  .admin-main {
+    margin-left: 80px;
+  }
+
+}
+
+/* Mobile */
+
+@media screen and (max-width: 500px)
+{
+  .wrapper {
+    max-width: 330px;
+    margin: 0 auto;
+  }
+  .header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+  }
+  .header__img {
+    width: 100%;
+  }
+  .header__news {
+    font-size: 20px;
+  }
+  .header__login-active {
+    font-size: 20px;
+  }
+  .search__input {
+    margin: 0;
+    margin-top: 15px;
+    width: 100%;
+  }
+  .news-without-login {
+    margin: 0;
+    padding: 10px;
+  }
+  .news__widget {
+    width: 100%;
+  }
+  .popup__content {
+    width: 100%;
+    height: 15%;
+  }
+  .popup__title {
+    font-size: 25px;
+  }
+  .popup__input {
+    width: 90%;
+    height: 25px;
+  }
+  .popup__submit {
+    width: 50%;
+    height: 25px;
+  }
+  .admin-main {
+    margin: 0;
   }
 }
 
