@@ -22,9 +22,9 @@ const AdminAccept = () => {
 
     const passNews = (news) => {
         dispatch({type: "ADD_NEWS", payload: news})
+        dispatch({type: "DELETE_ACCEPT", payload: news.id})
 
     }
-
 
 
     return (
