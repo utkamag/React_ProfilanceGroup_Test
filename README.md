@@ -7,8 +7,8 @@
 
 # Тестовые пользователи: 
 
-Admin: Логин: admin Пароль: admin
-User: Логин: user Пароль: user
+- Admin: Логин: admin Пароль: admin
+- User: Логин: user Пароль: user
 
 
 
