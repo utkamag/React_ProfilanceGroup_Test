@@ -21,9 +21,10 @@ https://reactprofilancegroup.firebaseapp.com/
 ## Технологический стек:
 - React
 - Redux
+- Redux-persist
 - БЭМ и SASS/SCS
 
-## Дополнительные зависимости:
+## Зависимости:
 - "firebase": "^9.9.0"
 - "firebase-tools": "^11.2.1"
 - "node-sass": "^7.0.1"
