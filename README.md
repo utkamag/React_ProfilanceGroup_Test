@@ -36,4 +36,3 @@ https://reactprofilancegroup.firebaseapp.com/
 - "redux": "^4.2.0"
 - "redux-devtools-extension": "^2.13.9"
 - "redux-persist": "^6.0.0"
-- "web-vitals": "^2.1.4"
